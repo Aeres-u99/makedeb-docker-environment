@@ -18,3 +18,5 @@ USER user
 RUN sh -c 'cd ~;mkdir -p ~/.vim'
 RUN sh -c 'wget -c https://gist.githubusercontent.com/Aeres-u99/35da61f3677937e02088eecdcdf9475b/raw/82d9119b3bc9b2d7d8d737aa2499b41f2eb0c857/vimrc -O ~/.vim/.vimrc'
 RUN figlet "Environment Ready"
+USER root
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
